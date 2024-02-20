@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 
 import styled from "styled-components";
 import VideoList from "@/pages/videoList/index";
+import PopperPage from "./popperPage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         메인영역
       </main>
+      <PopperPage />
     </>
   );
 }
