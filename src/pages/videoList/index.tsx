@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useRef, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef, useCallback, useMemo, useContext,  } from "react";
 import styled, { keyframes } from "styled-components";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -119,7 +119,7 @@ const utubeVideoList = ( props : IProps ) => {
 
     return (
         <>
-            <button ref={elRef} onClick={()=>{ router.back() }} style={{display : 'block', width: '100px', height: '50px', margin: '0 0 20px', cursor: 'pointer'}}>뒤로가기</button>
+            <button onClick={()=>{ router.back() }} style={{display : 'block', width: '100px', height: '50px', margin: '0 0 20px', cursor: 'pointer'}}>뒤로가기</button>
             <button onClick={checkedBtn} style={{width: 'fit-content', height: '50px', backgroundColor: '#444', color :'#fff', border: '0', padding: '10px', cursor: 'pointer'}}>redux버튼 : {`${auth}`}</button>
             <LinkInfoBox>
                 비디오 상세 링크 : <GoLink href={`${rdxUrl === '초기'? '' : rdxUrl}`} target="_blank">{rdxUrl}</GoLink>
